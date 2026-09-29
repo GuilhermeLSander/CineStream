@@ -2,79 +2,126 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 body {
   background-color: black;
   color: white;
-  font-family: sans-serif;
+  overflow-x: hidden;
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
-  background-color: darkslategrey;
+  padding: 20px 50px;
+  background-color: black;
 }
 
 .logo {
   font-size: 24px;
   font-weight: bold;
-  color: orange;
+  color: red;
 }
 
 .nav-links {
   display: flex;
-  gap: 20px;
   list-style: none;
+  gap: 20px;
 }
 
 .nav-links a {
   color: white;
   text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: red;
 }
 
 .hero {
-  padding: 60px 40px;
-  background-color: dimgray;
-  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  background: linear-gradient(rgba(0,0,0,0.7), black), url('https://unsplash.com') no-repeat center/cover;
+  padding: 60px 50px;
 }
 
 .hero-content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 15px;
+  max-width: 600px;
 }
 
-.hero button {
-  padding: 10px 20px;
-  background-color: orange;
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  color: lightgray;
+}
+
+.hero-content button {
+  background-color: red;
   color: white;
   border: none;
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
   cursor: pointer;
 }
 
+.hero-content button:hover {
+  background-color: darkred;
+}
+
+.hero-banner img {
+  width: 280px;
+  height: auto;
+  border-radius: 12px;
+  border: 2px solid red;
+  display: block;
+}
+
 .catalog-container {
-  padding: 40px;
+  padding: 40px 50px;
+  position: relative;
 }
 
 .catalog-container h2 {
   margin-bottom: 20px;
 }
 
+.movie-carousel-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
 .movie-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 25px;
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  width: 100%;
+  scrollbar-width: none;  
+}
+
+.movie-grid::-webkit-scrollbar {
+  display: none;
 }
 
 .movie-card {
-  background-color: darkslategrey;
+  flex: 0 0 180px;
+  background-color: darkslategray;
   border-radius: 8px;
   overflow: hidden;
-  transition: transform 0.2s;
 }
 
 .movie-card img {
@@ -84,24 +131,78 @@ body {
 }
 
 .card-info {
-  display: flex;
-  justify-content: space-between;
   padding: 12px;
 }
 
-.movie-card:hover {
-  transform: scale(1.05);
+.card-info h3 {
+  font-size: 14px;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-@keyframes pular {
-  0% {
-    transform: scale(1);
-    }
-  50% {
-    transform: scale(1.08);
-    }
-  100% {
-    transform: scale(1);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); 
-    }
+.card-info span {
+  font-size: 12px;
+  color: orange;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: 1px solid gray;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-btn:hover {
+  background-color: red;
+}
+
+.carousel-btn.prev { left: -22px; }
+.carousel-btn.next { right: -22px; }
+
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      gap: 15px;
+      padding: 15px;
   }
+
+  .hero {
+      flex-direction: column-reverse;
+      padding: 40px 20px;
+      text-align: center;
+      gap: 25px;
+  }
+
+  .hero-banner img {
+      width: 200px;
+  }
+
+  .catalog-container {
+      padding: 30px 20px;
+  }
+
+  .carousel-btn {
+      display: none;
+  }
+
+  .movie-card {
+      flex: 0 0 140px;
+  }
+
+  .movie-card img {
+      height: 200px;
+  }
+}
