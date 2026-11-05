@@ -14,8 +14,27 @@
             <li><a href="#">Início</a></li>
             <li><a href="#">Em Alta</a></li>
             <li><a href="#">Perfil</a></li>
+            <li><button id="abrir-formulario" type="button">+</button></li>
         </ul>
     </header>
+
+    <form id="form-filme" hidden>
+        <h3>Cadastrar Novo Anime</h3>
+        <p>
+            <label for="titulo">Título:</label>
+            <input id="titulo" name="titulo" required placeholder="Ex: Chainsaw Man">
+        </p>
+        <p>
+            <label for="capa">URL da capa:</label>
+            <input id="capa" name="capa" type="url" required placeholder="https://link-da-imagem.com">
+        </p>
+        <p>
+            <label for="nota">Nota (0 a 5):</label>
+            <input id="nota" name="nota" type="number" step="0.1" min="0" max="5" required placeholder="4.5">
+        </p>
+        <button type="submit">Adicionar anime</button>
+    </form>
+
 
     <section class="hero">
         <div class="hero-content">
@@ -113,14 +132,7 @@
         </div>
     </main>
 
-    <script>
-        function scrollGrid(direction) {
-            document.getElementById('animeGrid').scrollBy({
-                left: direction * 300,
-                behavior: 'smooth'
-            });
-        }
-    </script>
-
+    <script src="script.js"></script>
+    
 </body>
 </html>

@@ -206,3 +206,57 @@ body {
       height: 200px;
   }
 }
+#abrir-formulario {
+    background-color: crimson;
+    color: white;
+    border: none;
+    font-size: 18px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#form-filme {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    background-color: black;
+    border: 1px solid gray;
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+    z-index: 1000;
+}
+
+#form-filme h3 {
+    margin-bottom: 10px;
+    color: white;
+}
+
+#form-filme p {
+    margin-bottom: 10px;
+}
+
+#form-filme label {
+    display: block;
+    color: lightgray;
+}
+
+#form-filme input {
+    width: 100%;
+    padding: 6px;
+    background-color: darkgray;
+    border: 1px solid gray;
+    color: black;
+    box-sizing: border-box;
+}
+
+#form-filme button {
+    width: 100%;
+    padding: 8px;
+    background-color: crimson;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
