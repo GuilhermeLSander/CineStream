@@ -25,6 +25,10 @@
             <input id="titulo" name="titulo" required placeholder="Ex: Chainsaw Man">
         </p>
         <p>
+            <label for="genero">Gênero:</label>
+            <input id="genero" name="genero" required placeholder="Ex: Ação, Shounen">
+        </p>
+        <p>
             <label for="capa">URL da capa:</label>
             <input id="capa" name="capa" type="url" required placeholder="https://link-da-imagem.com">
         </p>
@@ -35,7 +39,6 @@
         <button type="submit">Adicionar anime</button>
     </form>
 
-
     <section class="hero">
         <div class="hero-content">
             <h1>One Piece</h1>
@@ -43,30 +46,22 @@
             <button>Assistir</button>
         </div>
         <div class="hero-banner">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjfzeiwH-ZtIGdUh2r38lVIu3ikEqR85l4L8qR5JFcmw&s=10" alt="One Piece Destaque">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZlIaCENWFNL-A4PfnfmW0da_0MuBqOurpwuZOAs27Ew&s=10" alt="One Piece">
         </div>
     </section>
 
     <main class="catalog-container">
         <h2>Animes Populares</h2>
-        
         <div class="movie-carousel-wrapper">
             <button class="carousel-btn prev" onclick="scrollGrid(-1)">❮</button>
-            
             <div class="movie-grid" id="animeGrid">
+                
                 <article class="movie-card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCkyM-oYAKf8hhKIgzAIDTkBp_KarmgFcM7mQ7qUVkUA&s=10" alt="Naruto">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDWHeOgwmVjJ6BF3qakxJhLH_UpjofUbl9aRw2uNRd7Q&s=10" alt="Dragon Ball">
                     <div class="card-info">
-                        <h3>Naruto Shippuden</h3>
-                        <span>⭐ 2.1</span>
-                    </div>
-                </article>
-
-                <article class="movie-card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGmLOMPjHSkZf0tqhiWc9YGCWLWzEoH1kQul95vUT0pg&s=10" alt="Dragon Ball">
-                    <div class="card-info">
-                        <h3>Dragon Ball Super</h3>
-                        <span>⭐ 4.7</span>
+                        <h3>Dragon Ball Super: Beerus</h3>
+                        <p class="genero-tag">Ação, Combate</p>
+                        <span>⭐ 4.9</span>
                     </div>
                 </article>
 
@@ -74,22 +69,25 @@
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQigobSp1b1DRmp6xeC4hcycUCRnUXcP3XQTxdkHxd14w&s=10" alt="Attack on Titan">
                     <div class="card-info">
                         <h3>Attack on Titan</h3>
+                        <p class="genero-tag">Ação, Drama, Fantasia</p>
                         <span>⭐ 4.9</span>
                     </div>
                 </article>
 
                 <article class="movie-card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt6xYZk4cn4JQR2cNsJw42x0s1KFkj7tuMzPM9Qs3FEQ&s=10" alt="Demon Slayer">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0fMxjRck-hY6tdV_nW-SnIWjFEvO3SGjYc77oCHjPUg&s=10" alt="Demon Slayer">
                     <div class="card-info">
                         <h3>Demon Slayer</h3>
+                        <p class="genero-tag">Ação, Histórico</p>
                         <span>⭐ 4.8</span>
                     </div>
                 </article>
 
                 <article class="movie-card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGKN3QsIhCN6k5B9QxGu5km2ctyLsmVuz56BmKTdOT5w&s=10" alt="Jujutsu Kaisen">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh3hSw1X2eKkBBNgd3rEtwENN-wnk38NLfJMpUoPiNlw&s=10" alt="Jujutsu Kaisen">
                     <div class="card-info">
                         <h3>Jujutsu Kaisen</h3>
+                        <p class="genero-tag">Ação, Sobrenatural</p>
                         <span>⭐ 4.6</span>
                     </div>
                 </article>
@@ -98,41 +96,43 @@
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ5m7Cz3MqjUYlYZAH2r2pw1M0wLlZAIZaSw_XsUDAjQ&s=10" alt="My Hero Academia">
                     <div class="card-info">
                         <h3>My Hero Academia</h3>
+                        <p class="genero-tag">Ação, Heróis</p>
                         <span>⭐ 4.4</span>
                     </div>
                 </article>
                 
                 <article class="movie-card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5F-EM84b2CAAms9ttm7kUqg1dDqVq7CKTz33cIls3Hw&s=10" alt="My Hero Academia">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAkUg63c2d_ZbwJbZCVMKksY8c_Y37aofTHEfvSYU7Xw&s=10" alt="Mushoku Tensei">
                     <div class="card-info">
                         <h3>Mushoku Tensei</h3>
+                        <p class="genero-tag">Isekai, Fantasia</p>
                         <span>⭐ 4.9</span>
                     </div>
                 </article>
 
                 <article class="movie-card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNe-p6k-tKAUX6S_2wcj2YyejubCFiF3qpIGhkqpYAFg&s=10" alt="My Hero Academia">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCE0aY4VRXxof1LZ6U-VnELToxNKX34Nyb5zY2KuK-Aw&s=10" alt="Black Clover">
                     <div class="card-info">
                         <h3>Black Clover</h3>
+                        <p class="genero-tag">Ação, Magia</p>
                         <span>⭐ 4.5</span>
                     </div>
                 </article>
 
                 <article class="movie-card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaTAKCEFk0EOXpKLhLKIcAA-owfFJkDMsQIlnXwrnevg&s=10" alt="My Hero Academia">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjw1NyEaOLEm7X4kZHK4OYkjA7cAOuXDkzg3ufMvyjqw&s=10" alt="Re:Zero">
                     <div class="card-info">
                         <h3>Re:Zero</h3>
+                        <p class="genero-tag">Isekai, Drama</p>
                         <span>⭐ 4.9</span>
                     </div>
                 </article>
 
             </div>
-
             <button class="carousel-btn next" onclick="scrollGrid(1)">❯</button>
         </div>
     </main>
 
     <script src="script.js"></script>
-    
 </body>
 </html>
